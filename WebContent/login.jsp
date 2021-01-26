@@ -15,11 +15,23 @@
 
 
 
-	<FORM action="Login">
+	<FORM action="Login" method="post">
+	<TABLE>
+	<TR>
+	<td>User Id </td><td><INPUT type="text" name="uName"></INPUT></td><BR />
+	</TR>
+	<BR />
+	<TR>
+	<TD>Password </TD><TD><input type="password" name="pass"></input></TD><BR />
 	
-	User Id <INPUT type="text" name="uid"></INPUT><BR />
-	Password <input type="password" name="pass"></input><BR />
-	<INPUT type="submit" value="login"></INPUT>
+	</TR>
+	<BR />
+	<td>
+	<INPUT type="submit" style="border-style: solid;" value="login"></INPUT>
+	</td>
+	
+	</TABLE>
+	
 	<A href="resetPassword.jsp">forgott password?</A>
 	
 	</FORM>

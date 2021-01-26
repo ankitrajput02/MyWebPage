@@ -7,15 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
 		<%
-		if(session.getAttribute("uid")==null){
+		
+		//To prevent go to  backpage after logout need to clear cache files
+		response.setHeader("Cache-Control", "must-revalidate , no-cache , no-store");   //for version html 1.1
+		response.setHeader("Pragma", "no-cache");    //for version html 1.0
+		//response.setHeader("Expires", "0");
+		if(session.getAttribute("username")==null){
 			response.sendRedirect("login.jsp");
 		}
 		%>
-		Hi ${uid}
+		Hi ${username}
 		
 		<form action="logout">
-		<input type="submit" value="logout">
+		<input type="submit" value="Logout">
 		
 		</form>
 </body>
